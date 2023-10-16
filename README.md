@@ -1,1 +1,1 @@
-# How all of my terraform projects
+# Holds all of my terraform projects
