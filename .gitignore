@@ -1,0 +1,5 @@
+TFPipeline/.terraform/*
+TFPipeline/.terraform.lock.hcl
+TFPipeline/terraform.tfstate
+TFPipeline/terraform.tfstate.backup
+.DS_Store

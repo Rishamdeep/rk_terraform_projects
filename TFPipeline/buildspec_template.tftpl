@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - docker build . -t ${ecr_repo}:${tag}
+      - aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${ecr_url}
+      - docker tag ${ecr_repo}:${tag} ${ecr_url}/${ecr_repo}:${tag}
+      - docker push ${ecr_url}/${ecr_repo}:${tag}

@@ -1,0 +1,34 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1698439858361",
+        "Action": [
+          "codecommit:BatchGet*",
+          "codecommit:Describe*",
+          "codecommit:Get*",
+          "codecommit:List*",
+          "codecommit:UploadArchive"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      {
+        "Sid": "Stmt1698439858362",
+        "Action": [
+          "s3:*"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      },
+      {
+        "Sid": "Stmt1698439858363",
+        "Action": [
+          "codebuild:*"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      }
+
+    ]
+  }
