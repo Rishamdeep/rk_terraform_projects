@@ -37,10 +37,15 @@ resource "aws_ecs_service" "ecs_service" {
   network_configuration {
     subnets = var.subnets
     assign_public_ip = true
-    security_groups = var.security_groups
+    security_groups = [aws_security_group.ecs_security_group.id]
   }
   launch_type = "FARGATE"
   enable_execute_command = true
+  load_balancer {
+    target_group_arn = aws_lb_target_group.ecs_target_group.arn
+    container_name = "httpd"
+    container_port = 80
+  }
 }
 
 # Creates autoscaling target targeting ecs service

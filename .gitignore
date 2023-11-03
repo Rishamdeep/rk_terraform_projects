@@ -7,3 +7,4 @@ ecs_service/terraform.tfstate
 ecs_service/terraform.tfstate.backup
 ecs_service/.terraform/*
 ecs_service/.terraform.lock.hcl
+ecs_service/.terraform.tfstate.lock.info

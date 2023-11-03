@@ -8,7 +8,8 @@
             "ssmmessages:CreateDataChannel",
             "ssmmessages:OpenControlChannel",
             "ssmmessages:OpenDataChannel",
-            "ecs:ExecuteCommand"
+            "ecs:ExecuteCommand",
+            "ec2:Describe*"
         ],
         "Effect": "Allow",
         "Resource": "*"
