@@ -10,7 +10,7 @@ variable "ecs_name" {
 
 variable "image_url" {
   type = string
-  default = "your-image-url"
+  default = "public.ecr.aws/docker/library/httpd:latest"
 }
 
 variable "container_name" {
@@ -25,10 +25,11 @@ variable "policy_arn" {
 
 variable "subnets" {
   type = list(string)
-  default = ["your-subnet-id"]
+  default = ["your-subnet-1-id","your-subnet-2-id"]
 }
 
-variable "security_groups" {
-  type = list(string)
-  default = ["your-security-group-id"]
+
+variable "vpc" {
+  type = string
+  default = "your-vpc-id"
 }
